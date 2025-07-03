@@ -32,6 +32,13 @@ from pathlib import Path
 from datetime import datetime
 from collections import Counter
 
+try:
+    import faiss
+except ModuleNotFoundError:
+    import subprocess, sys
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "faiss-cpu"])
+    import faiss
+
 
 # ── persistence paths ───────────────────────────────────
 PERSIST_DIR = Path("faiss_store")
