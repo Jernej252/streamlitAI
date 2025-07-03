@@ -22,7 +22,6 @@ import tempfile
 from pathlib import Path
 
 import numpy as np
-import faiss                   # Local vector database
 import streamlit as st
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from sentence_transformers import SentenceTransformer
@@ -32,6 +31,7 @@ from pathlib import Path
 from datetime import datetime
 from collections import Counter
 
+# Handle FAISS import with fallback installation
 try:
     import faiss
 except ModuleNotFoundError:
