@@ -7,3 +7,4 @@ markdown
 langchain-experimental 
 langchain-huggingface
 scipy
+faiss-cpu
